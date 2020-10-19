@@ -14,11 +14,9 @@ class SetIssue {
     const issue = new Issue({ name: args.n })
 
     if (!await exists(homePath())) {
-      console.log(`Criando caminho ${homePath()}`)
       await createRecursive(homePath())
     }
 
-    console.log('Escrevendo a issue', issue)
     await write(this.writePath, issue.toString())
   }
 }
