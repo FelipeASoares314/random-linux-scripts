@@ -6,7 +6,8 @@
   "bin": "cli.js",
   "scripts": {
     "pkg": "pkg --out-path dist .",
-    "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 ."
+    "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 .",
+    "install": "npm run pkg_linux && sudo cp dist/branchmanager /usr/local/issues"
   },
   "author": "Felipe Araujo Soares",
   "license": "ISC",
