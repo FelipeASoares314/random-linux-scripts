@@ -1,11 +1,11 @@
 #!/bin/bash
-basePath=`~/.branch_manager`
-issueFile=`$basePath/current_issue.txt`
+basePath="`echo $HOME`/.branch_manager"
+issueFile="`echo $basePath`/current_issue.txt"
 
-if [ ! -d $basePath || ! -f $issueFile ]; then
+if [ ! -d $basePath ] || [ ! -f $issueFile ]; then
   echo `cat $1`
   return 0
 fi
 
 issue=`cat $issueFile`
-echo `[$issue] $1`
+echo "[$issue] $1"
