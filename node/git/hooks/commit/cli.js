@@ -10,7 +10,7 @@ async function main () {
     process.exit(1)
   }
 
-  const rStream = await readStream(`${__dirname}/commit-msg.js`)
+  const rStream = await readStream(`${__dirname}/commit-msg.sh`)
   await writeStream(`${gitOutputPath}`, rStream)
   await chmod(gitOutputPath, '755')
   process.exit(0)

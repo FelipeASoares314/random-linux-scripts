@@ -5,7 +5,8 @@
   "main": "cli.js",
   "bin": "cli.js",
   "pkg": {
-    "scripts": "*.js"
+    "scripts": "*.js",
+    "assets": "*.sh"
   },
   "scripts": {
     "pkg": "pkg --out-path dist .",
