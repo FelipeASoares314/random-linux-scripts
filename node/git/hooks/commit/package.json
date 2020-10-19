@@ -1,0 +1,25 @@
+{
+  "name": "commit",
+  "version": "1.0.0",
+  "description": "Script de instalaçao de um script de commit para o branch manager",
+  "main": "cli.js",
+  "bin": "cli.js",
+  "scripts": {
+    "pkg": "pkg --out-path dist .",
+    "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 ."
+  },
+  "keywords": [
+    "node",
+    "script"
+  ],
+  "author": "Felipe A. Soares",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
