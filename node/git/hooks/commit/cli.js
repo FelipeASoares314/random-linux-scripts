@@ -2,7 +2,7 @@
 const { exists } = require('../../../helpers/directories')
 const { readStream, writeStream, chmod } = require('../../../helpers/files')
 
-const gitOutputPath = '.git/hooks/commit'
+const gitOutputPath = '.git/hooks/commit-msg'
 
 async function main () {
   if (!await exists('.git')) {
@@ -10,7 +10,7 @@ async function main () {
     process.exit(1)
   }
 
-  const rStream = await readStream(`${__dirname}/commitScript.js`)
+  const rStream = await readStream(`${__dirname}/commit-msg.js`)
   await writeStream(`${gitOutputPath}`, rStream)
   await chmod(gitOutputPath, '755')
   process.exit(0)

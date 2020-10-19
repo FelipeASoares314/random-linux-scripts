@@ -12,6 +12,6 @@ module.exports = class Issue extends Base {
   }
 
   toString () {
-    return JSON.stringify(this.name)
+    return this.name
   }
 }

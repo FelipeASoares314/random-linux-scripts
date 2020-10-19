@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { homeDir } = require('../../../helpers/osUser')
 const { read } = require('../../../helpers/files')
 const { exists } = require('../../../helpers/directories')
@@ -21,4 +22,9 @@ async function main () {
   process.exit(0)
 }
 
-main()
+function main2 () {
+  console.log(getCommitMessage())
+  process.exit(1)
+}
+
+main2()

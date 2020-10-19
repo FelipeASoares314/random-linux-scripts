@@ -4,9 +4,15 @@
   "description": "Script de instalaçao de um script de commit para o branch manager",
   "main": "cli.js",
   "bin": "cli.js",
+  "pkg": {
+    "scripts": "*.js"
+  },
   "scripts": {
     "pkg": "pkg --out-path dist .",
-    "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 ."
+    "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 .",
+    "copy_dist_to_local": "sudo cp dist/commit /usr/local/install-commit-message",
+    "create_syn_link": "sudo rm -f /usr/bin/install-commit-message || true && sudo ln -s /usr/local/install-commit-message /usr/bin/install-commit-message",
+    "install": "npm run pkg_linux && npm run copy_dist_to_local && npm run create_syn_link"
   },
   "keywords": [
     "node",
