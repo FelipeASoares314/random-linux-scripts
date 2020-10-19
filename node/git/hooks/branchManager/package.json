@@ -1,0 +1,26 @@
+{
+  "name": "branchmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg": "pkg --out-path dist .",
+    "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 ."
+  },
+  "author": "Felipe Araujo Soares",
+  "license": "ISC",
+  "dependencies": {
+    "pkg": "^4.4.9",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
