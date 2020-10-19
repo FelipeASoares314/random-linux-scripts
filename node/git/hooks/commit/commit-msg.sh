@@ -10,4 +10,4 @@ fi
 issue=`cat $issueFile`
 message=`cat $1`
 
-echo "[$issue] $message"
+echo "[$issue] $message" > $1
