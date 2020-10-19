@@ -8,7 +8,6 @@ function main () {
   const strategy = strategyFac(mainFunction)
 
   strategy.execute()
-    .then(_ => console.log('Finalizado com sucesso!'))
     .then(_ => process.exit(0))
     .catch(error => {
       console.log(error)
