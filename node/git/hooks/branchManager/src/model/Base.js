@@ -1,5 +1,5 @@
 module.exports = class Base {
   toString () {
-    JSON.stringify(this)
+    return JSON.stringify(this)
   }
 }

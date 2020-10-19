@@ -5,7 +5,6 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "pkg": "pkg --out-path dist .",
     "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 ."
   },
