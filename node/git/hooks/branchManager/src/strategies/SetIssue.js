@@ -2,28 +2,20 @@ const Issue = require('../model/Issue')
 
 const { args } = require('../args')
 const { write } = require('../../../../../helpers/files')
-const { homeDir } = require('../../../../../helpers/osUser')
+const { homePath, defaultFileName } = require('../configuration')
 const { createRecursive, exists } = require('../../../../../helpers/directories')
 
 class SetIssue {
-  constructor () {
-    this.configPath = args.config || this.defaultConfigPath
-  }
-
-  get defaultConfigPath () {
-    return `${homeDir()}/.branch_manager`
-  }
-
   get writePath () {
-    return `${this.configPath}/issue.json`
+    return `${homePath()}/${defaultFileName()}`
   }
 
   async execute () {
-    const issue = new Issue({ name: args.name })
+    const issue = new Issue({ name: args.n })
 
-    if (!await exists(this.configPath)) {
-      console.log(`Criando caminho ${this.configPath}`)
-      await createRecursive(this.configPath)
+    if (!await exists(homePath())) {
+      console.log(`Criando caminho ${homePath()}`)
+      await createRecursive(homePath())
     }
 
     console.log('Escrevendo a issue', issue)

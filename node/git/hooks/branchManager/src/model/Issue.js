@@ -10,4 +10,8 @@ module.exports = class Issue extends Base {
   validate () {
     if (!this.name) throw new Error('Issue deve ser informado')
   }
+
+  toString () {
+    return JSON.stringify(this.name)
+  }
 }

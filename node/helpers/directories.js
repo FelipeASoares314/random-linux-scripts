@@ -2,7 +2,7 @@ const fs = require('fs')
 
 module.exports = {
   exists: dir => new Promise(resolve => 
-    fs.access(dir, err => resolve(!err))  
+    fs.access(dir, err => resolve(!err))
   ),
 
   createRecursive: path => new Promise((resolve, reject) =>

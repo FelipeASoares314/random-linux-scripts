@@ -10,7 +10,7 @@ function main () {
   strategy.execute()
     .then(_ => process.exit(0))
     .catch(error => {
-      console.log(error)
+      console.error(error.message)
       process.exit(1)
     })
 }
