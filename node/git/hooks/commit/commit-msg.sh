@@ -8,4 +8,6 @@ if [ ! -d $basePath ] || [ ! -f $issueFile ]; then
 fi
 
 issue=`cat $issueFile`
-echo "[$issue] $1"
+message=`cat $1`
+
+echo "[$issue] $message"
