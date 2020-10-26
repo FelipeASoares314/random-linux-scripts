@@ -7,7 +7,7 @@
   "scripts": {
     "pkg": "pkg --out-path dist .",
     "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 .",
-    "install": "npm run pkg_linux && sudo cp dist/branchmanager /usr/local/issues"
+    "install": "npm run pkg_linux && sudo cp dist/branchmanager /usr/local/issues && sudo ln -s /usr/local/issues /usr/bin/issues"
   },
   "author": "Felipe Araujo Soares",
   "license": "ISC",
