@@ -1,5 +1,5 @@
 const yargs = require('yargs/yargs')
-const { hideBin } = require('yargs/helpers')
+const { hideBin } = yargs
 
 const argv = yargs(hideBin(process.argv)).argv
 

@@ -5,9 +5,10 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
+    "test": "jest",
     "pkg": "pkg --out-path dist .",
     "pkg_linux": "pkg --out-path dist --targets node12-linux-x64 .",
-    "install": "npm run pkg_linux && sudo cp dist/branchmanager /usr/local/issues && sudo ln -s /usr/local/issues /usr/bin/issues"
+    "install-app": "npm run pkg_linux && sudo cp dist/branchmanager /usr/local/issues && sudo ln -s /usr/local/issues /usr/bin/issues"
   },
   "author": "Felipe Araujo Soares",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.6.3"
   }
 }
